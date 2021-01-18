@@ -14,6 +14,7 @@ namespace Calısma
             switch (number)
             {
 
+
                 case 1:
             Console.WriteLine("durum 1 "); break;
                 case 2:
