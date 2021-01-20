@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace GenericsIntro
+{
+    class MyList<T>//T olarak ne verirsem istediğim elemanın turude odur.int,stringvb..
+    {
+        T[] items;
+        //ctor tab tab constructor--> classla aynı ısım
+        public MyList() //classı newlwersen otomotik çalısıyor
+        {
+            items = new T[0];
+        }
+        public void Add(T item)
+        {
+            T[] tempArray = items;//temp array elemanlarımı tutabilmek için 
+            items = new T[items.Length+1];
+            for (int i = 0; i < tempArray.Length; i++)
+            {
+                items[i] = tempArray[i];
+            }
+
+
+            items[items.Length - 1] = item;
+
+        }
+
+
+
+    }
+}
